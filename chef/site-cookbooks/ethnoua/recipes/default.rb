@@ -18,6 +18,7 @@ python_virtualenv "/home/vagrant/envs/ethnoua_env" do
   action :create
 end
 
+
 script "install_ethnoua_python_package" do
   interpreter "bash"
   user "vagrant"
