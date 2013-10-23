@@ -6,6 +6,7 @@
 #
 
 include_recipe 'python'
+include_recipe 'nvm'
 
 package "vim"
 package "screen"
@@ -26,4 +27,11 @@ script "install_ethnoua_python_package" do
   code <<-EOH
   /home/vagrant/envs/ethnoua_env/bin/python setup.py develop
   EOH
+end
+
+
+nvm_install '0.10.21'  do
+    from_source false
+    alias_as_default true
+    action :create
 end
