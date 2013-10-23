@@ -9,6 +9,7 @@ cookbook 'python'
 cookbook 'nvm'
 cookbook 'git'
 cookbook 'rabbitmq'
+cookbook 'nginx'
 cookbook 'rvm',
   :git => 'https://github.com/fnichol/chef-rvm'
 

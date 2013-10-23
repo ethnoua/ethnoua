@@ -7,6 +7,9 @@
     "user":{
       "name": "vagrant"
       },
+      "nginx": {
+        "version": "1.5.4"
+      },
       "python": {
         "version": "2.7.5",
         "install_method": "source"
@@ -88,6 +91,7 @@
     "rabbitmq::plugin_management",
     "rabbitmq::user_management",
     "rabbitmq::policy_management",
-    "rabbitmq::virtualhost_management"
+    "rabbitmq::virtualhost_management",
+    "nginx::source"
   ]
 }
