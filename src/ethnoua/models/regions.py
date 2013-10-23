@@ -1,8 +1,15 @@
+import datetime
+
 from django.db import models
 
 
 class Region(models.Model):
     name = models.CharField(max_length=255)
+    description = models.TextField(blank=True, null=True)
+    created = models.DateTimeField(
+        auto_now_add=True, default=datetime.datetime.now
+    )
+    updated = models.DateTimeField(default=datetime.datetime.now)
 
     def __unicode__(self):
         return self.name

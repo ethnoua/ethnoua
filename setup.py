@@ -9,7 +9,9 @@ setup(
     packages=find_packages('src'),
     install_requires=[
         'Django>=1.5.4,<1.6',
-        'logan'],
+        'logan',
+        'south'
+        ],
     entry_points={
         'console_scripts': [
             'ethnoua = ethnoua.utils.runner:main',

@@ -142,6 +142,10 @@ INSTALLED_APPS = (
     'ethnoua'
 )
 
+SOUTH_MIGRATION_MODULES = {
+    'ethnoua': 'ethnoua.migrations',
+}
+
 STATIC_ROOT = os.path.realpath(os.path.join(PROJECT_ROOT, 'static'))
 STATIC_URL = '/_static/'
 

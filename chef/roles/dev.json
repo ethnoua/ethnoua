@@ -92,6 +92,7 @@
     "rabbitmq::user_management",
     "rabbitmq::policy_management",
     "rabbitmq::virtualhost_management",
-    "nginx::source"
+    "nginx::source",
+    "ethnoua::default"
   ]
 }
