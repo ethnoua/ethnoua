@@ -1,4 +1,10 @@
+*.box
+*.db
 *.log
+*.mo
 *.pot
 *.pyc
 local_settings.py
+.vagrant/
+src/ethnoua.egg-info
+chef/tmp/

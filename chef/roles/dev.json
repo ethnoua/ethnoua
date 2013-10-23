@@ -1,0 +1,93 @@
+{
+  "name": "web",
+  "chef_type": "role",
+  "json_class": "Chef::Role",
+  "description": "Developer instance",
+  "default_attributes": {
+    "user":{
+      "name": "vagrant"
+      },
+      "python": {
+        "version": "2.7.5",
+        "install_method": "source"
+      },
+      "redis": {
+        "version": "2.6.16",
+        "release_url": "http://download.redis.io/releases/redis-2.6.16.tar.gz"
+      },
+      "rabbitmq": {
+        "virtualhosts": [
+          "ethnoua_dev"
+        ],
+        "enabled_users": [
+          {
+            "name": "developer",
+            "password": "rtP10!%10",
+            "tag": "admin,lead",
+            "rights": [
+              {
+                "vhost": "ethnoua_dev",
+                "conf": ".*",
+                "write": ".*",
+                "read": ".*"
+              }
+            ]
+          }
+        ]
+      },
+    "postgresql": {
+      "version": "9.3",
+      "users": [
+          {
+            "username": "developer",
+            "password": "2!jPn44RQ",
+            "superuser": true,
+            "createdb": true,
+            "login": true
+          }
+        ],
+      "databases": [
+          {
+            "name": "ethnoua_dev",
+            "owner": "developer",
+            "template": "template0",
+            "encoding": "utf8",
+            "locale": "en_US.UTF8"
+          },
+          {
+            "name": "ethnoua_dev_geo",
+            "owner": "developer",
+            "template": "template0",
+            "encoding": "utf8",
+            "locale": "en_US.UTF8"
+          },
+          {
+            "name": "ethnoua_release",
+            "owner": "developer",
+            "template": "template0",
+            "encoding": "utf8",
+            "locale": "en_US.UTF8"
+          }
+        ]
+    }
+  },
+  "run_list": [
+    "python::source",
+    "python::pip",
+    "git::default",
+    "python::virtualenv",
+    "postgresql::client",
+    "postgresql::server",
+    "postgresql::libpq",
+    "postgresql::pg_user",
+    "postgresql::contrib",
+    "postgresql::pg_database",
+    "postgresql::postgis",
+    "redis::install_from_release",
+    "rabbitmq::default",
+    "rabbitmq::plugin_management",
+    "rabbitmq::user_management",
+    "rabbitmq::policy_management",
+    "rabbitmq::virtualhost_management"
+  ]
+}
