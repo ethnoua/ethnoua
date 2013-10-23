@@ -1,10 +1,10 @@
 """
-sentry.conf.server
+ethnoua.conf.server
 ~~~~~~~~~~~~~~~~~~
 
-These settings act as the default (base) settings for the Sentry-provided web-server
+These settings act as the default (base) settings for the Ethnoua-provided web-server
 
-:copyright: (c) 2010-2013 by the Sentry Team, see AUTHORS for more details.
+:copyright: (c) 2010-2013 by the Ethnoua Team, see AUTHORS for more details.
 :license: BSD, see LICENSE for more details.
 """
 
@@ -137,6 +137,8 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.staticfiles',
+    'django_extensions',
+    'gunicorn',
 
     'south',
     'ethnoua'

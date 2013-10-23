@@ -37,7 +37,9 @@ setup(
         'PIL',
         'django-storages',
         'ipython',
-        'ipdb'
+        'ipdb',
+        'gunicorn',
+        'werkzeug'
         ],
     extras_require={
         'tests': tests_require,
