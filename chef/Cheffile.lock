@@ -8,7 +8,6 @@ SITE
     chef-client (3.1.0)
       cron (>= 1.2.0)
       logrotate (>= 1.2.0)
-    chef_gem (0.1.0)
     chef_handler (1.1.4)
     cron (1.2.8)
     dmg (2.0.4)
@@ -53,14 +52,6 @@ SITE
     yum (2.3.4)
 
 GIT
-  remote: https://github.com/fnichol/chef-rvm
-  ref: master
-  sha: 59dc482e2c39db4c378e79e10569f1becdc4bc43
-  specs:
-    rvm (0.9.1)
-      chef_gem (>= 0.0.0)
-
-GIT
   remote: https://github.com/phlipper/chef-postgresql
   ref: master
   sha: 2ea4b18178569549332028de27c3583717926888
@@ -77,5 +68,4 @@ DEPENDENCIES
   python (>= 0)
   rabbitmq (>= 0)
   redis (>= 0)
-  rvm (>= 0)
 

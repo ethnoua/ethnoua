@@ -10,6 +10,7 @@ include_recipe 'nvm'
 
 package "vim"
 package "screen"
+package "htop"
 
 
 python_virtualenv "/home/vagrant/envs/ethnoua_env" do

@@ -10,8 +10,6 @@ cookbook 'nvm'
 cookbook 'git'
 cookbook 'rabbitmq'
 cookbook 'nginx'
-cookbook 'rvm',
-  :git => 'https://github.com/fnichol/chef-rvm'
 
 cookbook 'postgresql',
   :git => 'https://github.com/phlipper/chef-postgresql'
