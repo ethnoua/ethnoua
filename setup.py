@@ -39,7 +39,8 @@ setup(
         'ipython',
         'ipdb',
         'gunicorn',
-        'werkzeug'
+        'werkzeug',
+        'boto'
         ],
     extras_require={
         'tests': tests_require,

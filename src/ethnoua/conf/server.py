@@ -139,6 +139,7 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'django_extensions',
     'gunicorn',
+    'storages',
 
     'south',
     'ethnoua'
@@ -153,9 +154,15 @@ STATIC_URL = '/_static/'
 
 STATICFILES_FINDERS = (
     "django.contrib.staticfiles.finders.FileSystemFinder",
-    "django.contrib.staticfiles.finders.AppDirectoriesFinder",
-    "static_compiler.finders.StaticCompilerFinder",
+    "django.contrib.staticfiles.finders.AppDirectoriesFinder"
 )
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+STATICFILES_STORAGE = 'storages.backends.s3boto.S3BotoStorage'
+AWS_ACCESS_KEY_ID = ''
+AWS_SECRET_ACCESS_KEY = ''
+AWS_STORAGE_BUCKET_NAME = 'ethnoua'
+
 
 LOCALE_PATHS = (
     os.path.join(PROJECT_ROOT, 'locale'),
