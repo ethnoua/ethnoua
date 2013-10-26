@@ -11,7 +11,22 @@ include_recipe 'nvm'
 package "vim"
 package "screen"
 package "htop"
+package "tmux"
 
+
+script "install_tmuxinator" do
+  interpreter "bash"
+  user "root"
+  code <<-EOH
+    gem1.9.1 instal tmuxinator
+  EOH
+end
+
+template '~/.tmuxinator/ethnoua.yml' do 
+  source "tmuxinator_ethnoua.yml"
+  owner "vagrant"
+  group "vagrant"
+end
 
 python_virtualenv "/home/vagrant/envs/ethnoua_env" do
   owner "vagrant"

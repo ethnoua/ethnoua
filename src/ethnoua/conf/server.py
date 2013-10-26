@@ -40,8 +40,8 @@ CACHES = {
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': 'sentry.db',
+        'ENGINE': 'django.contrib.gis.db.backends.postgis',
+        'NAME': 'ethnoua_geo',
         'USER': '',
         'PASSWORD': '',
         'HOST': '',
@@ -137,6 +137,7 @@ INSTALLED_APPS = (
     'django.contrib.sessions',
     'django.contrib.sites',
     'django.contrib.staticfiles',
+    'django.contrib.gis',
     'django_extensions',
     'gunicorn',
     'storages',

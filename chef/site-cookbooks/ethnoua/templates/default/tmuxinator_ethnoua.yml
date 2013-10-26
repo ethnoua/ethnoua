@@ -1,0 +1,14 @@
+name: ethnoua
+root: /vagrant/
+pre: source ~/envs/ethnoua_env/bin/activate
+
+windows:
+  - server:
+    layout: main-vertical
+    panes:
+      - sudo ethnoua --config=settings.conf runserver 0.0.0.0:80
+      - ls 
+  - migrations: ls
+  - logs: ls
+  - pep8: ls
+  - grunt: ls

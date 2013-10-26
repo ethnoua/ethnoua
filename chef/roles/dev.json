@@ -18,6 +18,15 @@
         "version": "2.6.16",
         "release_url": "http://download.redis.io/releases/redis-2.6.16.tar.gz"
       },
+      "geos": {
+        "version": "3.4.2"
+      },
+      "gdal": {
+        "version": "1.10.1"
+      },
+      "proj": {
+        "version": "4.8.0"
+      },
       "rabbitmq": {
         "virtualhosts": [
           "ethnoua_dev"
@@ -58,11 +67,23 @@
             "locale": "en_US.UTF8"
           },
           {
-            "name": "ethnoua_dev_geo",
+            "name": "template_postgis",
             "owner": "developer",
             "template": "template0",
             "encoding": "utf8",
-            "locale": "en_US.UTF8"
+            "locale": "en_US.UTF8",
+            "languages": ["plpgsql"],
+            "postgis": "2.1"
+          },
+          {
+            "name": "ethnoua_dev_geo",
+            "owner": "developer",
+            "template": "template_postgis",
+            "encoding": "utf8",
+            "locale": "en_US.UTF8",
+            "action": "drop",
+            "languages": ["plpgsql"],
+            "postgis": "2.1"
           },
           {
             "name": "ethnoua_release",
@@ -93,7 +114,10 @@
     "rabbitmq::policy_management",
     "rabbitmq::virtualhost_management",
     "nginx::source",
-    "ethnoua::default",
-    "nvm::default"
+    "nvm::default",
+    "geos::default",
+    "gdal::default",
+    "proj::default",
+    "ethnoua::default"
   ]
 }
