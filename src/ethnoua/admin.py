@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.contrib.gis import admin as geo_admin
 
 from .models import (Region, City, Location, Song, Commons,
-    Clothes, Buildings, BuildingType, Photo)
+    Clothes, Buildings, BuildingType, Photo, Profile, LandingPageSubscription)
 
 
 class SongAdmin(admin.ModelAdmin):
@@ -29,6 +29,16 @@ class CityAdmin(geo_admin.GeoModelAdmin):
     list_display = ('__unicode__',)
 
 
+class ProfileAdmin(admin.ModelAdmin):
+    list_display = ('__unicode__',)
+
+
+class LandingPageSubscriptionAdmin(admin.ModelAdmin):
+    list_display = ('__unicode__',)
+
+
+admin.site.register(Profile, ProfileAdmin)
+admin.site.register(LandingPageSubscription, LandingPageSubscriptionAdmin)
 admin.site.register(Buildings, BuildingsAdmin)
 admin.site.register(BuildingType, BuildingTypeAdmin)
 
