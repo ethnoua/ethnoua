@@ -17,12 +17,18 @@ Tested on:
 * `node['gdal']['version']` - the version of GDAL to use.
 
 
+## TODO
+
+* add custom attribute for `install_url`
+* support multiply versions of gdal installed
+* buid options
+
 License and Author
 ==================
 
-Author:: Paul A. Jungwirth (<pj@illuminatedcomputing.com>)
+Author:: Vasyl Dizhak (<dijakroot@gmail.com>)
 
-Copyright:: 2013, Illuminated Computing Inc.
+Copyright:: 2013, Django Stars LLC.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
@@ -35,3 +41,4 @@ distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+

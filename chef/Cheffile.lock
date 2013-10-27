@@ -16,8 +16,6 @@ SITE
       apt (>= 1.7.0)
       build-essential (>= 0.0.0)
       yum (>= 0.5.0)
-    gdal (0.1.0)
-      ark (>= 0.0.0)
     geos (0.1.1)
     git (2.7.0)
       build-essential (>= 0.0.0)
@@ -57,12 +55,27 @@ SITE
     yum (2.3.4)
 
 GIT
+  remote: git://github.com/fnichol/chef-rvm.git
+  ref: v0.9.0
+  sha: 4a408e5d6c5a52c37388a799c516430263339849
+  specs:
+    rvm (0.9.0)
+
+GIT
   remote: https://github.com/phlipper/chef-postgresql
   ref: master
   sha: 2ea4b18178569549332028de27c3583717926888
   specs:
     postgresql (0.13.0)
       apt (>= 0.0.0)
+
+GIT
+  remote: https://github.com/rootart/gdal-chef
+  ref: master
+  sha: 2647eadff992b6775ff82cbe2824b03dffea2be5
+  specs:
+    gdal (0.1.0)
+      ark (>= 0.0.0)
 
 DEPENDENCIES
   chef-client (>= 0)
@@ -76,4 +89,5 @@ DEPENDENCIES
   python (>= 0)
   rabbitmq (>= 0)
   redis (>= 0)
+  rvm (>= 0)
 

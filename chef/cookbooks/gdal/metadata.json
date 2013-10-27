@@ -2,8 +2,8 @@
   "name": "gdal",
   "description": "Installs GDAL",
   "long_description": "",
-  "maintainer": "Paul A. Jungwirth",
-  "maintainer_email": "pj@illuminatedcomputing.com",
+  "maintainer": "Vasyl Dizhak",
+  "maintainer_email": "dijakroot@gmail.com",
   "license": "Apache 2.0",
   "platforms": {
     "ubuntu": ">= 0.0.0"

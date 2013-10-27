@@ -1,6 +1,6 @@
 name              "gdal"
-maintainer        "Paul A. Jungwirth"
-maintainer_email  "pj@illuminatedcomputing.com"
+maintainer        "Vasyl Dizhak"
+maintainer_email  "dijakroot@gmail.com"
 license           "Apache 2.0"
 description       "Installs GDAL"
 version           "0.1"

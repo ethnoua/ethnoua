@@ -14,15 +14,13 @@ package "htop"
 package "tmux"
 
 
-script "install_tmuxinator" do
-  interpreter "bash"
-  user "root"
-  code <<-EOH
-    gem1.9.1 instal tmuxinator
-  EOH
+directory '/home/vagrant/.tmuxinator' do
+  owner "vagrant"
+  group "vagrant"
+  action :create
 end
 
-template '~/.tmuxinator/ethnoua.yml' do 
+template '/home/vagrant/.tmuxinator/ethnoua.yml' do 
   source "tmuxinator_ethnoua.yml"
   owner "vagrant"
   group "vagrant"

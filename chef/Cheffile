@@ -11,7 +11,9 @@ cookbook 'git'
 cookbook 'rabbitmq'
 cookbook 'nginx'
 cookbook 'geos'
-cookbook 'gdal'
+cookbook 'gdal',
+  :git => 'https://github.com/rootart/gdal-chef'
+
 cookbook 'proj'
 
 cookbook 'postgresql',
